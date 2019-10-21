@@ -18,11 +18,12 @@ It can be customized to test any http/https endpoints.
 
 3. Push the application using the IBM Cloud CLI
 
-   ```ibmcloud cf push
+   ```
+     ibmcloud cf push
    ```
 ## Customizing
 
-To customize you'll need to install (Node.js 8.x)[https://nodejs.org/en/download/] or later with **npm** and (browserify)[]
+To customize you'll need to install [Node.js 8.x](https://nodejs.org/en/download/) or later with **npm** and [browserify](http://browserify.org/)
 
 1. Clone this repo
 
@@ -35,11 +36,11 @@ e.g.
   results.push(await checkURL("https://petclinic-postgresql-petclinic.apps.ocp.kubernetes-workshops.com",80,"Verifying access to OpenShift master"));
   results.push(await checkURL("http://petclinic-postgresql-petclinic.apps.ocp.kubernetes-workshops.com",100,"Verifying access to OpenShift applications"));
 ```  
-The **checkURL** function takes 3 parameters for each test:
+The **checkURL()** function takes 3 parameters for each test:
+   - The URL of the endpoint to test.
+   - The state of the progress bar (ie percent complete) after the test is complete.
+   - The description of the endpoint to test.
 
-   i) The URL of the endpoint to test
-  ii) The state of the progress bar (ie percent complete) after the test is complete
- iii) The description of the tested
 
 3. Save changes to **app.js** and any other files and then run the following commands to regenerate the Javascript file **bundle.js**.
 ```
