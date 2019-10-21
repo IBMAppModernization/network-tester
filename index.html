@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Network Tester</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+
+<script src="bundle.js"></script>
+
+</head>
+<body>
+<div id="initial" class="container">
+  <div class="row divRow">
+    <div class="col">
+      <h5>
+      <p></p>
+      <p>This webpage will verify that all the required http/https endpoints needed for your upcoming OpenShift workshop are accessible from within your network.</p>
+      <p>The tests will attempt to connect to the required endpoints directly from your browser and report any network  problems encountered.</p>
+      <p>Click on the <b>Start Test</b> button below to run the tests.</p>
+    </h5>
+      <button id="startButton" type="button" class="btn btn-primary btn-lg" onclick="handleClick()">Start Test</button>
+    </div>
+  </div>
+</div>
+
+<div id="progressBarSection" class="container" style="display:none">
+
+  <div class="row divRow">
+    <div class="col">
+      <span id="progressBarStatus" style="font-size: smaller">Test progress:</span>
+      <div class="progress" style="height: 30px;">
+         <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="resultsSection" class="container" style="display:none">
+  <div class="row">
+    <div class="col-12">
+      <h4>Results</h4>
+      <p id="resultBanner" class="resultHeader">
+      </p>
+      <table id="resultTable">
+
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

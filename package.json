@@ -1,0 +1,7 @@
+{
+  "name": "network-tester",
+  "version": "1.0.0",
+  "dependencies": {
+    "is-reachable": "^4.0.0"
+  }
+}

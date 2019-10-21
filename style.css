@@ -1,0 +1,52 @@
+.divRow {
+  margin-bottom: 1em;
+}
+
+#resultTable {
+    margin-top: 1em;
+    margin-right: 0px;
+    margin-bottom: 1em;
+    margin-left: 0px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-collapse: collapse;
+    font-family: Source Sans Pro,Open Sans,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 13.6px;
+    font-size: .85rem;
+    width: 100%;
+
+}
+
+.resultHeader {
+    margin-top: 1em;
+    margin-right: 0px;
+    margin-bottom: 1em;
+    margin-left: 0px;
+    font-family: Source Sans Pro,Open Sans,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+
+td.col1  {
+    padding: 1em;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    border-right: 1px solid rgba(0,0,0,.2);
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: rgba(0, 0, 0, 0.2);
+}
+
+tr.resultRow  {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+td.col2  {
+    padding: 1em;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
