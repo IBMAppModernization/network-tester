@@ -48,6 +48,8 @@ The **checkURL()** function takes 3 parameters for each test:
    browserify app.js -o bundle.js
 ```
 
+4. Test your updates by deploying locally or on IBM Cloud 
+
 ## Troubleshooting failed tests
 
 Look at your Javascript console in your browser for more details about failed tests.
