@@ -54,4 +54,6 @@ The **checkURL()** function takes 3 parameters for each test:
 
 ## Troubleshooting failed tests
 
-Look at your Javascript console in your browser for more details about failed tests.
+Security restrictions in the browser prevent you from  getting detailed information on networking errors in Javascript so you need to look at the  Javascript console in your browser for more details about failed tests. Here's an example failure in the console when the host of a URL cannot be resolved:
+
+![Sample error](sampleError.png)

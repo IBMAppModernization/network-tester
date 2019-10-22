@@ -1,8 +1,8 @@
 ---
 applications:
-- buildpack: staticfile_buildpack
-  host: network-tester
-  name: network-tester
+- name: network-tester
   memory: 64M
-  domains:
-  - us-south.cf.appdomain.cloud
+  routes:
+    - route: network-tester.us-south.cf.appdomain.cloud
+  buildpacks:
+    - staticfile_buildpack
