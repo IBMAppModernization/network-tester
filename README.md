@@ -12,15 +12,17 @@ It can be customized to test any http/https endpoints.
 
 ## Running on Cloud Foundry on the IBM Cloud
 
-1. Clone this repo
+1. Clone this repo.
 
 2. Edit the file **manifest.yml** and enter a unique **host** for the Cloud Foundry application.
 
-3. Push the application using the IBM Cloud CLI
+3. Push the application using the IBM Cloud CLI.
 
    ```
      ibmcloud cf push
    ```
+4. Open the designated Cloud Foundry route in your browser.
+
 ## Customizing
 
 To customize you'll need to install [Node.js 8.x](https://nodejs.org/en/download/) or later with **npm** and [browserify](http://browserify.org/)
@@ -48,7 +50,7 @@ The **checkURL()** function takes 3 parameters for each test:
    browserify app.js -o bundle.js
 ```
 
-4. Test your updates by deploying locally or on IBM Cloud 
+4. Test your updates by deploying locally or on IBM Cloud
 
 ## Troubleshooting failed tests
 
