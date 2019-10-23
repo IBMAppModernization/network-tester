@@ -23,13 +23,13 @@ It can be customized to test any http/https endpoints.
    ```
 4. Open the designated Cloud Foundry route in your browser.
 
-## Customizing
+## Customizing for a specific client
 
 To customize you'll need to install [Node.js 8.x](https://nodejs.org/en/download/) or later with **npm** and [browserify](http://browserify.org/)
 
 1. Clone this repo
 
-2. To modify the endpoints tested edit the file **app.js**. Modify the function **global.handleClick** and  replace the http/https endpoints with the ones you want tested.
+2. Modify the endpoints tested by editing the file **app.js**. Modify the function **global.handleClick** and  replace the http/https endpoints with the ones you want tested.
 e.g.
 ```
   results.push(await checkURL("https://github.com",20,"Verifying access to github"));
@@ -50,10 +50,18 @@ The **checkURL()** function takes 3 parameters for each test:
    browserify app.js -o bundle.js
 ```
 
-4. Test your updates by deploying locally or on IBM Cloud
+4. Deploy on IBM Cloud using a unique route (by modifying `manifest.yml`) with the clients name (e.g. `https://myclient-network-tester.us-south.cf.appdomain.cloud/`) and direct the client to the URL.
 
 ## Troubleshooting failed tests
 
-Security restrictions in the browser prevent you from  getting detailed information on networking errors in Javascript so you need to look at the  Javascript console in your browser for more details about failed tests. Here's an example failure in the console when the host of a URL cannot be resolved:
+Security restrictions in the browser prevent you from  getting detailed information on networking errors in Javascript so you need to look at the  Javascript console in your browser for more details about failed tests. Ask your client to look at the console if any of the tests fail and let you know what caused the error(s). Here's an example failure in the console when the host of a URL cannot be resolved:
 
 ![Sample error](sampleError.png)
+
+## Working around failed tests
+
+You should try the following sequence of actions if there are failed tests:
+1. Try to get the offending URL(s) whitelisted by the client's  network security  team for the duration of the workshop(e.g this was done at GM and RBC)
+2.  Have the client  disable the VPN on their laptops and use a public Wifi network (eg Morgan Stanley )
+3. Host at an IBM location and have clients disable the VPN on their laptops  (eg State St. )
+4. In the event clients cannot disable the VPN on their laptops even on a public network, use a public network and provide laptops for  the students.
