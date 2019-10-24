@@ -44,7 +44,7 @@ global.handleClick = async function() {
   var results = [];
   results.push(await checkURL("https://github.com",20,"Verifying access to github.com"));
   results.push(await checkURL("https://cloud.ibm.com",40,"Verifying access to IBM Cloud"));
-  results.push(await checkURL("http://169.62.47.198",60,"Verifying access to Terminal Server"));
+  results.push(await checkURL("https://workshop.shell.cloud.ibm.com",60,"Verifying access to Terminal Server"));
   results.push(await checkURL("https://petclinic-postgresql-petclinic.apps.ocp.kubernetes-workshops.com",80,"Verifying access to OpenShift master"));
   results.push(await checkURL("http://petclinic-postgresql-petclinic.apps.ocp.kubernetes-workshops.com",100,"Verifying access to OpenShift applications"));
 
